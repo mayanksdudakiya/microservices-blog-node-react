@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CommentCreate from "./CommentCreate";
+import CommentsList from "./CommentsList";
 
 export default () => {
     const [posts, setPosts] = useState({});
@@ -24,6 +25,7 @@ export default () => {
                 <h3>{post.title}</h3>
             </div>
             <hr/>
+            <CommentsList postId={post.id}/>
             <CommentCreate postId={post.id}/>
         </div>
     });
