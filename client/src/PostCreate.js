@@ -1,8 +1,6 @@
 import React, {useState} from "react";
 import axios from 'axios';
-
-
-
+import PostsList from "./PostsList";
 
 export default () => {
     const [title, setTitle] = useState('');
@@ -31,5 +29,8 @@ export default () => {
             </div>
             <button className="btn btn-primary">Submit</button>
         </form>
+        <hr/>
+        <h2>Posts</h2>
+        <PostsList/>
     </div> 
 };
